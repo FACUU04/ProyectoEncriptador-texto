@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-arg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+
+    <div id="modal-reglas" class="modal">
+        <div class="modal-content">
+            <h2>Reglas para usar el encriptador</h2>
+            <ul>
+                <li> 1_Solo se permiten letras minúsculas.</li>
+                <li> 2_Los caracteres especiales no seran encriptados</li>
+                <li> 3_No se permiten acentos</li>
+                <!-- Agrega más reglas aquí -->
+            </ul>
+            <button id="aceptar-btn">Aceptar</button>
+        </div>
+    </div>
+
+
+    <main>
+        <section>
+            <textarea class="textarea" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                <button id="reglas-btn" class="btn btn-danger">Reglas</button>
+            </div>
+        </section>
+
+        <section>
+            <textarea class="mensaje" placeholder="Mensaje encriptado"></textarea>
+            <div>
+                <button onclick="copiarTexto()" class="copiartxt">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NameRandom04</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
